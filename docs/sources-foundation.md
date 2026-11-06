@@ -1,0 +1,29 @@
+# Referensi materi Fondasi dan OOP
+
+Diperiksa pada 14 September 2026. Semua tautan berikut benar-benar dibuka melalui penelusuran web. Materi, analogi, skenario koperasi/perpustakaan, latihan, dan contoh kode di `app/data/lessons-foundation.php` ditulis khusus untuk kurikulum ini; tautan dipakai memeriksa perilaku bahasa dan API, bukan menyalin tutorial.
+
+| Materi | Referensi primer | Fakta yang diperiksa |
+| --- | --- | --- |
+| Cara kerja program | [Struktur program C#](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/program-structure/) dan [Tour C#](https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/overview) | Top-level statements, perbedaan build dan run, source dan program, expressions/statements. |
+| Input/output | [Console.ReadLine](https://learn.microsoft.com/en-us/dotnet/api/system.console.readline?view=net-10.0) | Membaca satu baris dari standard input, menunggu Enter pada keyboard, string kosong berbeda dari null saat akhir input. |
+| String dan formatting | [String interpolation](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/string-interpolation) dan [Strings](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/) | Interpolasi, perubahan string menghasilkan nilai baru, format angka pada tampilan. |
+| Konversi dan validasi | [Konversi string ke angka](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/how-to-convert-a-string-to-a-number) dan [Operator aritmetika](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/arithmetic-operators) | TryParse mengembalikan bool serta out, input tidak sah berbeda dari rentang bisnis, pembagian integer. |
+| Debugging | [Debugger feature tour](https://learn.microsoft.com/en-us/visualstudio/debugger/debugger-feature-tour?view=visualstudio) | Breakpoint, melangkah melalui kode, dan mengamati variabel. Skenario jejak rata-rata merupakan latihan original. |
+| Properties/encapsulation | [Properties](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties), [Access modifiers](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers), [init](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/init) | Accessor, private set, get-only, dan batas perubahan setelah inisialisasi. |
+| Struct, enum, record | [Struct](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/struct), [Enum](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum), [Record](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record) | Value semantics, angka enum yang belum tentu terdefinisi, equality record, shallow copy dengan with, record tidak selalu immutable mendalam. |
+| Komposisi | [Dependency injection](https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection/overview) dan [Interfaces](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/interfaces) | Constructor injection dan pemisahan kontrak dari implementasi; contoh tarif memakai perakitan manual tanpa container. |
+| SOLID | [Architectural principles](https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/architectural-principles), [Interface design](https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/interface), [Dependency injection](https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection/overview) | Separation of concerns, single responsibility, dependency inversion, interface kecil. Uraian lima prinsip memakai contoh ongkir original dan menekankan kontrak perilaku. |
+| Proyek perpustakaan | [Dictionary.TryGetValue](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2.trygetvalue?view=net-10.0), [Model objek C#](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/), [Unit-testing best practices](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices) | Lookup aman, keadaan objek, dan pemisahan perilaku domain dari keluaran. Skenario penerimaan serta kode katalog ditulis khusus untuk proyek. |
+
+Target contoh adalah proyek console `net10.0` dengan implicit usings dan nullable aktif (template standar SDK .NET 10). Semua contoh dapat diletakkan sebagai keseluruhan `Program.cs`; jangan menumpuk definisi class antarcontoh dalam proyek yang sama. Nama dan angka dibuat agar hasil mudah diperiksa manual. Program interaktif memakai input contoh yang disebut pada panel hasil.
+
+Halaman `https://learn.microsoft.com/en-us/dotnet/csharp/how-to/parse-strings-using-tryparse` sempat dicoba tetapi menghasilkan kegagalan pengambilan, sehingga tidak dijadikan rujukan. Referensi parsing yang dipakai adalah halaman programming guide pada tabel.
+
+## Verifikasi lokal
+
+- PHP lint lulus pada berkas data.
+- Sepuluh lesson memiliki seluruh field wajib, enam section masing-masing, minimal tiga langkah walkthrough, dua kesalahan umum, dan dua latihan bertingkat; seluruh ID unik.
+- Jumlah kata narasi: 7.510 (rentang 720–777 per lesson), tidak termasuk kode, output, URL, atau label referensi.
+- Seluruh sepuluh contoh dibangun dan dijalankan pada .NET SDK 10.0.302, target `net10.0`, nullable aktif, serta warning diperlakukan sebagai error. Hasil sesuai panel output; dua contoh interaktif diberi input `Habib` dan `3`.
+- Tambahan pemeriksaan input: kosong, teks bukan angka, nol, satu, sepuluh, sebelas, bilangan melampaui kapasitas int, dan nama hanya spasi. Seluruh jalur format/rentang serta nama pengganti memberikan hasil yang diharapkan.
+- Proyek pemeriksaan dibuat terpisah di direktori sementara sistem sehingga tidak mengubah program contoh atau struktur aplikasi web.

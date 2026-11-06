@@ -1,0 +1,27 @@
+# .NET example build output
+**/bin/
+**/obj/
+**/TestResults/
+*.user
+*.suo
+*.pdb
+
+# Local credentials and machine-specific settings
+.env
+.env.*
+!.env.example
+**/appsettings.Development.json
+**/appsettings.Local.json
+**/appsettings.Production.json
+**/secrets.json
+
+# Editor and OS files
+.vs/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated deployment archives and logs
+dist/*.zip
+*.log

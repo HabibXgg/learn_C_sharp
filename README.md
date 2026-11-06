@@ -83,7 +83,7 @@ Halaman [Praktik API Chinook](http://127.0.0.1:8080/index.php?page=praktik-api) 
 
 Pengunjung dapat mengambil [repository contoh asli](https://github.com/opxw/api-samples) dengan `git clone https://github.com/opxw/api-samples.git`, lalu masuk ke `api-samples/chinook/src`. Repository website ini juga menyertakan `database/Chinook_MySql.sql` agar proyek latihan beserta datanya tersedia setelah di-clone. SQL tersebut tidak ada di repository contoh asli. Periksa [peringatan impor database](database/README.md) sebelum menjalankannya.
 
-`.gitignore` di root dan di `examples/chinook-api` mengabaikan hasil build .NET, konfigurasi lokal yang mungkin berisi kredensial, arsip deploy, serta file editor. Berkas `appsettings.json` contoh tetap disertakan dengan password kosong; simpan kredensial sungguhan di environment variable atau file lokal yang diabaikan Git. Folder ini belum diinisialisasi sebagai repository Git dan belum di-push; hubungkan ke repository milikmu saat siap.
+`.gitignore` di root dan di `examples/chinook-api` mengabaikan hasil build .NET, konfigurasi lokal yang mungkin berisi kredensial, arsip deploy, serta file editor. Berkas `appsettings.json` contoh tetap disertakan dengan password kosong; simpan kredensial sungguhan di environment variable atau file lokal yang diabaikan Git.
 
 Implementasi memperluas Fase 1 PRD sesuai permintaan pengguna: 40 materi dalam empat tahap (10 fondasi, 9 OOP, 10 lanjutan, 11 spesialisasi), empat halaman panduan, 20 tools, navigasi, pencarian dasar, dan tampilan responsif. Setiap materi memiliki uraian lebih mendalam, bedah kode, kesalahan umum, latihan utama, serta dua latihan tambahan dengan petunjuk dan jawaban.
 
